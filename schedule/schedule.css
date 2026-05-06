@@ -1,0 +1,207 @@
+/* =================
+  For Schedule page
+  ==================
+*/
+
+.hero-badge{
+  display:inline-block;background:var(--highlight);color:#222;
+  padding:0.4rem 0.8rem;border-radius:20px;font-family:'Poppins',sans-serif;margin-bottom:12px;
+}
+.hero h1{font-family:'Poppins',sans-serif;font-size:2.4rem;color:var(--highlight);margin:0.6rem 0}
+.hero p{color:rgba(255,255,255,0.9);max-width:720px;margin:0 auto 1.6rem;line-height:1.6}
+
+/* Glass container for hero content */
+.hero-content{
+  max-width:980px;
+  width:100%;
+  margin:0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius:20px;
+  padding:32px 28px;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.6);
+  text-align:center;
+}
+
+
+/* =======================
+   SECTIONS & TABS
+======================= */
+.section{padding:2.5rem 1rem}
+.section-title{font-family:'Poppins',sans-serif;background:var(--highlight);color:#222;text-align:center;margin-bottom:1rem;padding:0.1rem 0.3rem}
+.tabs{display:flex;justify-content:center;gap:12px;margin-bottom:1.2rem}
+.tab{padding:0.5rem 1rem;border-radius:20px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);cursor:pointer}
+.tab.active{background:var(--accent);color:var(--black);border:none}
+
+/* =======================
+   SCHEDULE - GLASS LIST
+======================= */
+.schedule, .schedule-hidden{
+  max-width:980px;margin:0 auto;margin-bottom:1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* Header row (desktop) */
+.schedule-header{
+  display:grid;grid-template-columns:1fr 2.5fr 2fr;
+  padding:12px 16px;background:rgba(0,0,0,0.35);color:var(--highlight);
+  font-family:'Poppins',sans-serif;font-size:0.95rem;
+}
+
+/* Each schedule row */
+.schedule-row{
+  display:grid;grid-template-columns:1fr 2.5fr 2fr;
+  gap:8px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.04);
+  align-items:center;color:var(--muted);
+}
+.schedule-row:last-child{border-bottom:none}
+
+/* Time column */
+.schedule-row span:first-child{font-weight:700;color:var(--accent)}
+
+/* Event name */
+.schedule-row span:nth-child(2){font-family:'Poppins',sans-serif;color:var(--white)}
+
+/* Venue */
+.schedule-row span:last-child{color:rgba(255,255,255,0.7)}
+
+/* Small collapsible card variant (mobile) */
+.schedule-row.card-style{
+  display:flex;flex-direction:column;background:var(--card-bg);margin:10px;border-radius:12px;padding:12px;
+}
+.card-meta{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.card-meta .time{font-weight:700;color:var(--accent)}
+.card-meta .place{color:rgba(255,255,255,0.8)}
+
+/* =======================
+   CARDS / SIDE LIST
+======================= */
+.card-grid{display:grid;gap:1rem;padding:1rem;}
+.card{
+  background: var(--card-bg); padding:14px;border-radius:14px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.5);color:var(--muted);
+}
+.card h3{font-family:'Poppins',sans-serif;color:var(--white);margin-bottom:8px}
+.card-img{max-width:340px;max-height: 340px;object-fit:cover;border-radius:10px;display:block;margin-bottom:10px}
+/* =======================
+   GUEST CARDS – SLIGHTLY SMALLER
+======================= */
+
+#guests .scroll-x .card{
+  min-width: 240px;   /* smaller than featured events */
+  padding: 12px;
+}
+
+#guests .card-img-portrait{
+  height: 300px;      /* reduce image height */
+  object-fit: cover;
+}
+
+
+/* =======================
+   HORIZONTAL SCROLL (EVENTS & GUESTS)
+======================= */
+
+.scroll-x{
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 12px 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Cards sizing */
+.scroll-x .card{
+  min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Scrollbar styling */
+.scroll-x::-webkit-scrollbar{
+  height: 6px;
+}
+
+.scroll-x::-webkit-scrollbar-track{
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+
+.scroll-x::-webkit-scrollbar-thumb{
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+/* Firefox */
+.scroll-x{
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) rgba(255,255,255,0.08);
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.event-btn{
+  padding:10px 20px;border-radius:999px;border:none;background:var(--accent);
+  color:var(--black);font-weight:700;cursor:pointer;transition:transform .2s ease;
+}
+.event-btn:hover{transform:scale(1.04)}
+
+/* =======================
+   FOOTER
+======================= */
+.footer{background:transparent;color:var(--muted);text-align:center;padding:1rem;margin-top:2rem}
+
+/* =======================
+   FLOATING & HOVER
+======================= */
+.highlight-card:hover,.event-card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(0,0,0,0.6)}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width:1100px){
+  .events-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .nav ul { display:none }
+  .menu-btn{display: block}
+  .schedule-header{display:none}
+  .schedule-row{grid-template-columns:1.3fr;gap:6px;padding:12px}
+  .schedule-row span{font-size:0.95rem}
+  .hero h1{font-size:2rem}
+  .card-grid{grid-template-columns:1fr 1fr}
+  .menu-btn{display:block !important}
+  .nav-links, .nav ul{display:none !important}
+  .mobile-menu{right:-100%;transition:right .35s ease}
+
+  /* Card adjustments at 768px: reduce padding, tighten shadow, scale images */
+  .card{
+    padding:12px !important;
+    border-radius:12px !important;
+    box-shadow:0 8px 20px rgba(0,0,0,0.45) !important;
+    align-items:flex-start;
+  }
+
+  .card h3{font-size:1rem}
+
+  .card-img, .card-img-portrait{width:100%;height:140px;object-fit:cover;border-radius:10px}
+
+  /* Make cards easier to scan on tablets — two columns */
+  /* make cards flow horizontally on tablets — new cards append left→right */
+  .card-grid{
+    display:flex;
+    gap:12px;
+    padding:0 12px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+  }
+
+  .card{min-width:240px;flex:0 0 auto;scroll-snap-align:start}
+}

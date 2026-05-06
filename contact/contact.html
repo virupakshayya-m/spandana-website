@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Spandana 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- Contact CSS -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <!-- NAVBAR (Same as Home) -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Spandana 2026</h1>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about/about.html" class="nav-link">About</a></li>
+        <li><a href="../events/events.html" class="nav-link">Events</a></li>
+        <li><a href="../schedule/schedule.html" class="nav-link">Schedule</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button id="menu-btn" class="menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <ul id="mobile-menu" class="mobile-menu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about/about.html">About</a></li>
+    <li><a href="../events/events.html">Events</a></li>
+    <li><a href="../schedule/schedule.html">Schedule</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      Have questions about Spandana 2026? We’re happy to help.
+    </p>
+
+    <div class="contact-container">
+
+      <!-- LEFT: CONTACT DETAILS -->
+      <div class="contact-card details-card">
+        <h3>Contact Details</h3>
+
+        <p><strong>📍 Address</strong><br>
+          TKIET Campus, Warananagar<br>
+          Maharashtra, India
+        </p>
+
+        <p><strong>📧 Email</strong><br>
+          spandana@tkiet.edu.in
+        </p>
+
+        <p><strong>📞 Phone</strong><br>
+          +91 98765 43210
+        </p>
+      </div>
+
+      <!-- RIGHT: CONTACT FORM -->
+      <div class="contact-card form-card">
+        <h3>Send Us a Message</h3>
+
+        <form 
+          action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+          method="POST"
+          target="_blank">
+
+          <label>Name</label>
+          <input type="text" name="entry.1234567890" required>
+
+          <label>Email</label>
+          <input type="email" name="entry.0987654321" required>
+
+          <label>Message</label>
+          <textarea name="entry.1122334455" rows="5" required></textarea>
+
+          <button type="submit" class="btn primary">Submit</button>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <iframe 
+      src="https://www.google.com/maps?q=TKIET%20Warananagar&output=embed"
+      loading="lazy">
+    </iframe>
+  </section>
+
+</div>
+
+<!-- JS -->
+<script src="../common.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
