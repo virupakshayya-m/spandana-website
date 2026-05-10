@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule | Spandana 2026</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navbar-->
+    <nav id="navbar">
+      <div class="nav-container">
+        <h1 class="logo">Spandana 2026</h1>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="schedule.html" class="nav-link active">Schedule</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <button id="menu-btn" class="menu-btn">☰</button>
+      </div>
+    </nav>
+    
+    <!-- MOBILE MENU -->
+    <ul id="mobile-menu" class="mobile-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- HEADER SECTION -->
+    <section class="schedule-header reveal">
+      <h2 class="page-title">Event Schedule</h2>
+      <p class="page-subtitle">Plan your days at Spandana 2026. Three days of non-stop excitement and culture.</p>
+    </section>
+
+    <!-- SCHEDULE TIMELINE -->
+    <section class="schedule-section reveal">
+      <div class="tabs">
+        <button class="tab active" onclick="showDay('day1')">Day 1: Feb 25</button>
+        <button class="tab" onclick="showDay('day2')">Day 2: Feb 26</button>
+        <button class="tab" onclick="showDay('day3')">Day 3: Feb 27</button>
+      </div>
+
+      <div class="timeline" id="day1">
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">10:00 AM</div>
+          <div class="event-details">
+            <h3>Inauguration Ceremony</h3>
+            <p>Kick-off the festival with our respected dignitaries and chief guests.</p>
+            <span class="venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+        
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">12:00 PM</div>
+          <div class="event-details">
+            <h3>Folk Dance Extravaganza</h3>
+            <p>Experience the rich traditions and vibrant colors of regional folk dances.</p>
+            <span class="venue">📍 Open Stage</span>
+          </div>
+        </div>
+        
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">04:00 PM</div>
+          <div class="event-details">
+            <h3>Dance Battle</h3>
+            <p>High-energy solo and group dance performances.</p>
+            <span class="venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">06:30 PM</div>
+          <div class="event-details">
+            <h3>Battle of Bands</h3>
+            <p>Live music competition featuring top college bands across the state.</p>
+            <span class="venue">📍 Open Stage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-hidden" id="day2" style="display: none;">
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">10:30 AM</div>
+          <div class="event-details">
+            <h3>Classical Music Performances</h3>
+            <p>Soulful classical renditions to start your morning right.</p>
+            <span class="venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">12:30 PM</div>
+          <div class="event-details">
+            <h3>Fun Games Arena</h3>
+            <p>Interactive games and competitions full of excitement.</p>
+            <span class="venue">📍 Campus Grounds</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">04:30 PM</div>
+          <div class="event-details">
+            <h3>Drama Night</h3>
+            <p>Stage plays showcasing powerful storytelling, acting, and creativity.</p>
+            <span class="venue">📍 Seminar Hall</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">07:00 PM</div>
+          <div class="event-details">
+            <h3>EDM Dance Night</h3>
+            <p>End the day with an electrifying DJ night.</p>
+            <span class="venue">📍 Open Stage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-hidden" id="day3" style="display: none;">
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">02:30 PM</div>
+          <div class="event-details">
+            <h3>Fashion Show</h3>
+            <p>Witness style, creativity, and confidence on the glamorous ramp.</p>
+            <span class="venue">📍 Open Stage</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">05:30 PM</div>
+          <div class="event-details">
+            <h3>Celebrity Talk</h3>
+            <p>Meet inspiring celebrities and personalities live on stage.</p>
+            <span class="venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card reveal">
+          <div class="time-badge">07:00 PM</div>
+          <div class="event-details">
+            <h3>Prize Distribution & Closing Ceremony</h3>
+            <p>Celebrating the winners and saying goodbye to an amazing festival.</p>
+            <span class="venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED HIGHLIGHTS -->
+    <section class="highlights-section reveal">
+      <h2 class="section-title">Schedule Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card reveal">
+          <img src="assets/img/dance.jpg" alt="Dance Battle">
+          <h4>Dance Battle</h4>
+          <p>High-energy solo and group dance performances.</p>
+        </div>
+        <div class="highlight-card reveal">
+          <img src="assets/img/live-music.jpg" alt="Battle of Bands">
+          <h4>Battle of Bands</h4>
+          <p>Live music competition featuring college bands.</p>
+        </div>
+        <div class="highlight-card reveal">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EDM Dance Night">
+          <h4>EDM Dance Night</h4>
+          <p>End the festival with an electrifying DJ night.</p>
+        </div>
+        <div class="highlight-card reveal">
+          <img src="assets/img/guest.jpg" alt="Celebrity Talk">
+          <h4>Celebrity Talk</h4>
+          <p>Meet inspiring celebrities and personalities live on stage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer reveal">
+      <p>© 2026 Spandana Cultural Committee</p>
+    </footer>
+
+  </div>
+
+  
+  
+<script src="assets/js/script.js"></script>
+</body>
+</html>

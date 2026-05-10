@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Spandana 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<div class="overlay">
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Spandana 2026</h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button id="menu-btn" class="menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <ul id="mobile-menu" class="mobile-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2 class="section-title reveal">Get in Touch</h2>
+
+    <div class="contact-container">
+      <!-- FORM -->
+      <div class="contact-card reveal">
+        <form id="contactForm">
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="input-group">
+            <label>Message</label>
+            <textarea id="message" placeholder="How can we help?" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="send-btn">Send Message</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+
+      <!-- MAP / INFO -->
+      <div class="contact-card info reveal">
+        <h3>Venue Location</h3>
+        <p>Main Campus Grounds, TKIET, Warananagar</p>
+        <p>Email: contact@spandana2026.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+        <div class="map-box">
+          <!-- Placeholder for map -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.671854964264!2d74.19575781481647!3d16.855353288399587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1a80a7c8a6b7b%3A0x2a6e33b9af5d4171!2sTatyasaheb%20Kore%20Institute%20of%20Engineering%20%26%20Technology%20(An%20Autonomous%20Institute)!5e0!3m2!1sen!2sin!4v1715367600000!5m2!1sen!2sin" 
+            width="100%" height="200" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <p>© 2026 Spandana Cultural Committee</p>
+  </footer>
+
+</div>
+
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

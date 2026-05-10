@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register | Spandana 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<div class="overlay">
+
+  <section class="register-section reveal">
+    <div class="reg-card">
+      <h2>Join the Celebration</h2>
+      <p>Fill in the details to register for Spandana 2026 events.</p>
+
+      <form class="reg-form">
+        <div class="input-row">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-row">
+          <input type="text" placeholder="College Name" required>
+          <input type="text" placeholder="Phone Number" required>
+        </div>
+
+        <div class="selection-group">
+          <label>Type of Participation</label>
+          <div class="radio-group">
+            <label><input type="radio" name="ptype" value="solo" onclick="toggleGroup(false)" checked> Solo</label>
+            <label><input type="radio" name="ptype" value="group" onclick="toggleGroup(true)"> Group</label>
+          </div>
+        </div>
+
+        <div id="groupSizeBox" class="input-group" style="display: none;">
+          <label>Number of members</label>
+          <input type="number" min="2" max="20" placeholder="e.g. 5">
+        </div>
+
+        <div class="selection-group">
+          <label>Choose Main Event</label>
+          <select required>
+            <option value="" disabled selected>Select Event</option>
+            <option>Dance Battle</option>
+            <option>Battle of Bands</option>
+            <option>Drama Night</option>
+            <option>Fashion Show</option>
+            <option>Folk Dance</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Complete Registration</button>
+      </form>
+
+      <div class="back-home">
+        <a href="index.html">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- SMALL JS -->
+<script>
+  function toggleGroup(show) {
+    document.getElementById("groupSizeBox").style.display = show ? "block" : "none";
+  }
+</script>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
