@@ -99,6 +99,7 @@ p {
   font-weight: 600;
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
   padding-bottom: 4px;
+  display: inline-block; /* Enable transform animations */
 }
 
 .nav-link.active, .mobile-menu a.active {
@@ -152,7 +153,6 @@ p {
 
 .mobile-menu a {
   font-size: 1.2rem;
-  display: inline-block; /* Required for transform scale to work well */
 }
 
 /* =======================

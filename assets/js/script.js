@@ -22,10 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // NAVBAR SCROLL EFFECT
   if (navbar) {
     window.addEventListener("scroll", () => {
-      navbar.style.background =
-        window.scrollY > 50
-          ? "rgba(0,0,0,0.6)"
-          : "rgba(0,0,0,0.4)";
+      if (window.scrollY > 50) {
+        navbar.classList.add("nav-scrolled");
+      } else {
+        navbar.classList.remove("nav-scrolled");
+      }
     });
   }
 
@@ -50,10 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ACTIVE LINK HIGHLIGHTING
   const currentPath = window.location.pathname;
-  const page = currentPath.split("/").pop() || "index.html";
+  const pageName = currentPath.split("/").pop().split("?")[0].split("#")[0] || "index.html";
   const navLinks = document.querySelectorAll(".nav-link, .mobile-menu a");
   navLinks.forEach(link => {
-    if (link.getAttribute("href") === page) {
+    const href = link.getAttribute("href");
+    if (href === pageName || (pageName === "index.html" && href === "/")) {
       link.classList.add("active");
     }
   });
@@ -91,14 +93,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const secondsEl = document.getElementById("seconds");
 
   if (daysEl && hoursEl && minutesEl && secondsEl) {
-    setInterval(() => {
+    const updateTimer = () => {
       const now = new Date().getTime();
       const diff = eventDate - now;
-      daysEl.innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-      hoursEl.innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      minutesEl.innerText = Math.floor((diff / (1000 * 60)) % 60);
-      secondsEl.innerText = Math.floor((diff / 1000) % 60);
-    }, 1000);
+
+      if (diff <= 0) {
+        daysEl.innerText = hoursEl.innerText = minutesEl.innerText = secondsEl.innerText = "00";
+        return;
+      }
+
+      daysEl.innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+      hoursEl.innerText = Math.floor((diff / (1000 * 60 * 60)) % 24).toString().padStart(2, '0');
+      minutesEl.innerText = Math.floor((diff / (1000 * 60)) % 60).toString().padStart(2, '0');
+      secondsEl.innerText = Math.floor((diff / 1000) % 60).toString().padStart(2, '0');
+    };
+    setInterval(updateTimer, 1000);
+    updateTimer();
   }
 });
 
