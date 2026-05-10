@@ -93,7 +93,7 @@ p {
   gap: 32px;
 }
 
-.nav-link {
+.nav-link, .mobile-menu a {
   text-decoration: none;
   color: var(--white);
   font-weight: 600;
@@ -101,13 +101,13 @@ p {
   padding-bottom: 4px;
 }
 
-.nav-link.active {
+.nav-link.active, .mobile-menu a.active {
   color: var(--highlight);
   text-shadow: 0 0 10px var(--highlight);
   border-bottom: 2px solid var(--highlight);
 }
 
-.nav-link:hover {
+.nav-link:hover, .mobile-menu a:hover {
   transform: scale(1.2) translateY(-5px);
   color: var(--accent);
   text-shadow: 0 0 10px var(--accent),
@@ -151,10 +151,8 @@ p {
 }
 
 .mobile-menu a {
-  color: var(--white);
-  text-decoration: none;
   font-size: 1.2rem;
-  font-weight: 600;
+  display: inline-block; /* Required for transform scale to work well */
 }
 
 /* =======================
